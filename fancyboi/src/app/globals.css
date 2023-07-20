@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -71,7 +71,7 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -100,8 +100,89 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: .5px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #EAD9CB;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 30px 80px;
+  background-color: #6C3B1C;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  align-self: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #EAD9CB;
+    color: #6C3B1C;
+    letter-spacing: 3px;
+    transition: 0.3s ease-in-out;
+
+    &::after {
+      transition: .3s ease-out;
+    }
+  }
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+
+#myVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }

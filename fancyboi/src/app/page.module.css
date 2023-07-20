@@ -1,37 +1,52 @@
+
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
 }
 
 .description {
   display: inherit;
-  justify-content: inherit;
+  justify-content: center;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  padding-top: 20px;
 }
 
-.description a {
+.description h1 {
+  margin:  0 100px;
+}
+
+.links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  width: 303px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.description img {
+  margin-left: 100px;
+}
+
+.hero {
+width: 100%;
+height: 70vh;
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
 }
 
 .code {
@@ -107,6 +122,35 @@
 .logo {
   position: relative;
 }
+
+.cta {
+  display: inherit;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  padding-bottom: 40px;
+}
+
+.ctainn {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  
+  padding: 0px 60px;
+}
+
+.ctainn > h2 {
+  padding-bottom: 20px;
+}
+
+.ctainn > p {
+  line-height: 30px;
+  padding-bottom: 70px
+}
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -201,6 +245,7 @@
     z-index: 1;
   }
 }
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
